@@ -22,3 +22,20 @@ let fredTheZombie = Zombie()
 fredTheZombie.town = myTown
 fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printDescription()
+
+print(Square.numberOfSides())
+print(Cube.numberOfSides())
+
+func greet(name: String, withGreeting greeting: String) -> String {
+    return "\(greeting) \(name)"
+}
+func greeting(forName name: String) -> (String) -> String {
+    func greeting(_ greeting: String) -> String {
+        return "\(greeting) \(name)"
+    }
+
+    return greeting
+}
+print(greet(name: "Matt", withGreeting: "Hello, "))
+let greetMattWith = greeting(forName: "Matt")
+print(greetMattWith("Hello, "))
