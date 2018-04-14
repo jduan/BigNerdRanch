@@ -9,12 +9,15 @@ struct Town {
     // type property
     static let region = "South"
 
+    var mayor: Mayor = Mayor()
+
     var population = 5_422 {
         // property observers
         // * when a property is about to change, via willSet
         // * when a property did change, via didSet
         didSet(oldPopulation) {
             print("The population has changed to \(population) from \(oldPopulation)")
+            mayor.logTragedy()
         }
     }
     var numberOfStoplights = 4

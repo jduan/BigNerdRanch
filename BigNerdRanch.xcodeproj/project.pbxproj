@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9DBAC15DDD9020556CCFFAFF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC2B7F78ED88B2B359950 /* main.swift */; };
+		9DBAC35F202206F4466D542E /* Mayor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBACAF512FBEEFCD31F54D8 /* Mayor.swift */; };
 		9DBAC8F4B054A9F89666663F /* town.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC17F34408253DD9B8851 /* town.swift */; };
 		9DBAC9D3C2D54ACDCF839639 /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC504DD8C055FB86A866E /* Zombie.swift */; };
 		9DBACAB61822ADF93435DC57 /* Vampire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC5D356F7B4B62788AFFC /* Vampire.swift */; };
@@ -35,6 +36,7 @@
 		9DBAC5D356F7B4B62788AFFC /* Vampire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vampire.swift; sourceTree = "<group>"; };
 		9DBAC81511E9C780F79CE7FE /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		9DBAC859BA97889910932F0A /* sandbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sandbox.swift; sourceTree = "<group>"; };
+		9DBACAF512FBEEFCD31F54D8 /* Mayor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mayor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				9DBAC504DD8C055FB86A866E /* Zombie.swift */,
 				9DBAC5D356F7B4B62788AFFC /* Vampire.swift */,
 				9DBAC859BA97889910932F0A /* sandbox.swift */,
+				9DBACAF512FBEEFCD31F54D8 /* Mayor.swift */,
 			);
 			path = BigNerdRanch;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 				9DBAC9D3C2D54ACDCF839639 /* Zombie.swift in Sources */,
 				9DBACAB61822ADF93435DC57 /* Vampire.swift in Sources */,
 				9DBACDD352ED09D84894549A /* sandbox.swift in Sources */,
+				9DBAC35F202206F4466D542E /* Mayor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
