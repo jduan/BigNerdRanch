@@ -39,3 +39,19 @@ func greeting(forName name: String) -> (String) -> String {
 print(greet(name: "Matt", withGreeting: "Hello, "))
 let greetMattWith = greeting(forName: "Matt")
 print(greetMattWith("Hello, "))
+
+print("\n===\n")
+
+let myTownSize = myTown.townSize
+print("myTownSize is \(myTownSize)")
+print("myTownSize is \(myTownSize)")
+print("myTownSize2 is \(myTown.townSize2())")
+print("myTownSize3 is \(myTown.townSize3)")
+myTown.population = 1_000_000
+print("myTownSize3 is \(myTown.townSize3)")
+
+print("\n===\n")
+
+print("Victim pool: \(fredTheZombie.victimPool)")
+fredTheZombie.victimPool = 500
+print("Victim pool: \(fredTheZombie.victimPool)")
