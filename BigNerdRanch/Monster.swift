@@ -7,7 +7,13 @@ import Foundation
 
 class Monster {
     var town: Town?
-    var name = "Monster"
+    var name: String
+
+    // "required" says subclasses must implement this initializer
+    required init(town: Town?, monsterName: String) {
+        self.town = town
+        name = monsterName
+    }
 
     // static property: can't be overridden by subclasses!
     static let isTerrifying = true

@@ -9,19 +9,20 @@
 import Cocoa
 print("")
 
-var myTown = Town()
+var myTown = Town(population: 10_000, stoplights: 6)
 myTown.printDescription()
 myTown.changePopulation(by: 500)
 myTown.printDescription()
 
-let genericMonster = Monster()
-genericMonster.town = myTown
+let genericMonster = Monster(town: myTown, monsterName: "Luke")
 genericMonster.terrorizeTown()
 
-let fredTheZombie = Zombie()
-fredTheZombie.town = myTown
+let fredTheZombie = Zombie(limp: false, fallingApart: false,
+        town: myTown, monsterName: "Fred")
 fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printDescription()
+
+var convenientZombie = Zombie(limp: true, fallingApart: false)
 
 print(Square.numberOfSides())
 print(Cube.numberOfSides())

@@ -6,12 +6,11 @@
 import Foundation
 
 struct Town {
-    // type property
-    static let region = "South"
+    let region: String
 
     var mayor: Mayor = Mayor()
 
-    var population = 5_422 {
+    var population: Int {
         // property observers
         // * when a property is about to change, via willSet
         // * when a property did change, via didSet
@@ -20,7 +19,21 @@ struct Town {
             mayor.logTragedy()
         }
     }
-    var numberOfStoplights = 4
+    var numberOfStoplights: Int
+
+    // initializer
+    init(population: Int, stoplights: Int, region: String) {
+        // Even thought "region" is a constant, the compiler allows you to initialize a constant
+        // property at one point during initialization.
+        self.region = region
+        self.population = population
+        numberOfStoplights = stoplights
+    }
+
+    // initializer delegation
+    init(population: Int, stoplights: Int) {
+        self.init(population: population, stoplights: stoplights, region: "N/A")
+    }
 
     // nested types
     enum Size {
@@ -78,7 +91,11 @@ struct Town {
     }
 
     func printDescription() {
-        print("Population: \(population), number of stoplights: \(numberOfStoplights)")
+        print("""
+                Population: \(population),
+                number of stoplights: \(numberOfStoplights),
+                region: \(region)
+              """)
     }
 
     mutating func changePopulation(by amount: Int) {
