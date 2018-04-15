@@ -17,10 +17,10 @@ myTown.printDescription()
 let genericMonster = Monster(town: myTown, monsterName: "Luke")
 genericMonster.terrorizeTown()
 
-let fredTheZombie = Zombie(limp: false, fallingApart: false,
+var fredTheZombie: Zombie? = Zombie(limp: false, fallingApart: false,
         town: myTown, monsterName: "Fred")
-fredTheZombie.terrorizeTown()
-fredTheZombie.town?.printDescription()
+fredTheZombie?.terrorizeTown()
+fredTheZombie?.town?.printDescription()
 
 var convenientZombie = Zombie(limp: true, fallingApart: false)
 
@@ -53,6 +53,9 @@ print("myTownSize3 is \(myTown.townSize3)")
 
 print("\n===\n")
 
-print("Victim pool: \(fredTheZombie.victimPool)")
-fredTheZombie.victimPool = 500
-print("Victim pool: \(fredTheZombie.victimPool)")
+print("Victim pool: \(fredTheZombie?.victimPool)")
+fredTheZombie?.victimPool = 500
+print("Victim pool: \(fredTheZombie?.victimPool)")
+
+// This will trigger deinitialization
+fredTheZombie = nil
