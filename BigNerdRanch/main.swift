@@ -9,10 +9,10 @@
 import Cocoa
 print("")
 
-var myTown = Town(population: 10_000, stoplights: 6)
-myTown.printDescription()
-myTown.changePopulation(by: 500)
-myTown.printDescription()
+var myTown = Town(population: 0, stoplights: 6)
+myTown?.printDescription()
+myTown?.changePopulation(by: 500)
+myTown?.printDescription()
 
 let genericMonster = Monster(town: myTown, monsterName: "Luke")
 genericMonster.terrorizeTown()
@@ -43,13 +43,13 @@ print(greetMattWith("Hello, "))
 
 print("\n===\n")
 
-let myTownSize = myTown.townSize
+let myTownSize = myTown?.townSize
 print("myTownSize is \(myTownSize)")
 print("myTownSize is \(myTownSize)")
-print("myTownSize2 is \(myTown.townSize2())")
-print("myTownSize3 is \(myTown.townSize3)")
-myTown.population = 1_000_000
-print("myTownSize3 is \(myTown.townSize3)")
+print("myTownSize2 is \(myTown?.townSize2())")
+print("myTownSize3 is \(myTown?.townSize3)")
+myTown?.population = 1_000_000
+print("myTownSize3 is \(myTown?.townSize3)")
 
 print("\n===\n")
 

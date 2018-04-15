@@ -21,8 +21,11 @@ struct Town {
     }
     var numberOfStoplights: Int
 
-    // initializer
-    init(population: Int, stoplights: Int, region: String) {
+    // failable initializer
+    init?(population: Int, stoplights: Int, region: String) {
+        guard population > 0 else {
+            return nil
+        }
         // Even thought "region" is a constant, the compiler allows you to initialize a constant
         // property at one point during initialization.
         self.region = region
@@ -31,7 +34,7 @@ struct Town {
     }
 
     // initializer delegation
-    init(population: Int, stoplights: Int) {
+    init?(population: Int, stoplights: Int) {
         self.init(population: population, stoplights: stoplights, region: "N/A")
     }
 
