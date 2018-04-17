@@ -150,6 +150,47 @@ protocol TabularDataSource {
     func itemFor(row: Int, column: Int) -> String
 }
 
+struct Book {
+    let title: String
+    let author: String
+    let averageReviews: Double
+}
+
+struct BookCollection: TabularDataSource {
+    var books = [Book]()
+
+    mutating func add(_ book: Book) {
+        books.append(book)
+    }
+
+    var numberOfRows: Int {
+        return books.count
+    }
+
+    var numberOfColumns: Int {
+        return 3
+    }
+
+    func label(forColumn column: Int) -> String {
+        switch column {
+        case 0: return "Title"
+        case 1: return "Author"
+        case 2: return "Average Reviews"
+        default: fatalError("Invalid column!")
+        }
+    }
+
+    func itemFor(row: Int, column: Int) -> String {
+        let book = books[row]
+        switch column {
+        case 0: return book.title
+        case 1: return book.author
+        case 2: return String(book.averageReviews)
+        default: fatalError("Invalid column!")
+        }
+    }
+}
+
 // implements multiple Protocols
 struct Department: TabularDataSource, CustomStringConvertible {
     let name: String
