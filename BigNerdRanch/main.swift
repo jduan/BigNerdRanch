@@ -274,3 +274,19 @@ func printTable(_ dataSource: TabularDataSource & CustomStringConvertible) {
 }
 
 printTable(department)
+
+/////////////////////////////////////////////////////////////////////////////
+// Error Handling
+/////////////////////////////////////////////////////////////////////////////
+func evaluate(_ input: String) {
+    print("Evaluating: \(input)")
+    let lexer = Lexer(input: input)
+    do {
+        let tokens = try lexer.lex()
+        print("Lexer output: \(tokens)")
+    } catch {
+        print("An error occurred: \(error)")
+    }
+}
+evaluate("10 + 3 + 5")
+evaluate("1 + 2 + abcdefg")
