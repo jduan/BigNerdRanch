@@ -141,7 +141,7 @@ struct Person {
     let yearsOfExperience: Int
 }
 
-protocol TabularDataSource {
+protocol TabularDataSource: CustomStringConvertible {
     // for read-write properties, use "{ get set }"
     var numberOfRows: Int { get }
     var numberOfColumns: Int { get }
@@ -151,7 +151,7 @@ protocol TabularDataSource {
 }
 
 // implements multiple Protocols
-struct Department: TabularDataSource, CustomStringConvertible {
+struct Department: TabularDataSource {
     let name: String
     var people = [Person]()
 
@@ -203,6 +203,7 @@ department.add(Person(name: "Fred", age: 50, yearsOfExperience: 20))
 
 // use a Protocol in a function
 func printTable(_ dataSource: TabularDataSource) {
+    print("Table: \(dataSource.description)")
     // keep track of the width of each column
     var columnWidths = [Int]()
 
