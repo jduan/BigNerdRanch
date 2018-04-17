@@ -150,8 +150,8 @@ protocol TabularDataSource {
     func itemFor(row: Int, column: Int) -> String
 }
 
-// implements a Protocol
-struct Department: TabularDataSource {
+// implements multiple Protocols
+struct Department: TabularDataSource, CustomStringConvertible {
     let name: String
     var people = [Person]()
 
@@ -189,9 +189,14 @@ struct Department: TabularDataSource {
         default: fatalError("Invalid column!")
         }
     }
+
+    var description: String {
+        return "Department (\(name))"
+    }
 }
 
 var department = Department(name: "Engineering")
+print("Department: \(department)")
 department.add(Person(name: "Joe", age: 30, yearsOfExperience: 6))
 department.add(Person(name: "Karen", age: 40, yearsOfExperience: 18))
 department.add(Person(name: "Fred", age: 50, yearsOfExperience: 20))
