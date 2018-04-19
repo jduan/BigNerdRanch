@@ -285,12 +285,23 @@ func evaluate(_ input: String) {
     do {
         let tokens = try lexer.lex()
         print("Lexer output: \(tokens)")
+
+        let parser = Parser(tokens: tokens)
+        let result = try parser.parse()
+        print("Parser result: \(result)")
     } catch Lexer.Error.invalidCharacter(let char) {
         print("Input contained an invalid character: \(char)")
+    } catch Parser.Error.unexpectedEndOfInput {
+        print("Unexpected end of input during parsing")
+    } catch Parser.Error.invalidToken(let token) {
+        print("Invalid token during parsing: \(token)")
     } catch {
         // "error" is a pre-defined constant by the compiler
         print("An unknown error occurred: \(error)")
     }
 }
 evaluate("10 + 3 + 5")
-//evaluate("1 + 2 + abcdefg")
+evaluate("1 + 2 + abcdefg")
+evaluate("1 + 2 +")
+evaluate("1 + 2 + 5 3")
+evaluate("1 + 2 ++")

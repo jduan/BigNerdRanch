@@ -10,6 +10,7 @@
 		9DBAC13BA3630526A86C7610 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC87875D3AD33F7B6BC95 /* Lexer.swift */; };
 		9DBAC15DDD9020556CCFFAFF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC2B7F78ED88B2B359950 /* main.swift */; };
 		9DBAC35F202206F4466D542E /* Mayor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBACAF512FBEEFCD31F54D8 /* Mayor.swift */; };
+		9DBAC6C69E90D5993A7E6306 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBACE2FE5BB50E0B459FD27 /* Parser.swift */; };
 		9DBAC8F4B054A9F89666663F /* town.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC17F34408253DD9B8851 /* town.swift */; };
 		9DBAC9D3C2D54ACDCF839639 /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC504DD8C055FB86A866E /* Zombie.swift */; };
 		9DBACAB61822ADF93435DC57 /* Vampire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC5D356F7B4B62788AFFC /* Vampire.swift */; };
@@ -39,6 +40,7 @@
 		9DBAC859BA97889910932F0A /* sandbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sandbox.swift; sourceTree = "<group>"; };
 		9DBAC87875D3AD33F7B6BC95 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		9DBACAF512FBEEFCD31F54D8 /* Mayor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mayor.swift; sourceTree = "<group>"; };
+		9DBACE2FE5BB50E0B459FD27 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				9DBAC859BA97889910932F0A /* sandbox.swift */,
 				9DBACAF512FBEEFCD31F54D8 /* Mayor.swift */,
 				9DBAC87875D3AD33F7B6BC95 /* Lexer.swift */,
+				9DBACE2FE5BB50E0B459FD27 /* Parser.swift */,
 			);
 			path = BigNerdRanch;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				9DBACDD352ED09D84894549A /* sandbox.swift in Sources */,
 				9DBAC35F202206F4466D542E /* Mayor.swift in Sources */,
 				9DBAC13BA3630526A86C7610 /* Lexer.swift in Sources */,
+				9DBAC6C69E90D5993A7E6306 /* Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
