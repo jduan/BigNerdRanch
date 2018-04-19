@@ -277,6 +277,7 @@ printTable(department)
 
 /////////////////////////////////////////////////////////////////////////////
 // Error Handling
+print("\n === \n")
 /////////////////////////////////////////////////////////////////////////////
 func evaluate(_ input: String) {
     print("Evaluating: \(input)")
@@ -284,9 +285,12 @@ func evaluate(_ input: String) {
     do {
         let tokens = try lexer.lex()
         print("Lexer output: \(tokens)")
+    } catch Lexer.Error.invalidCharacter(let char) {
+        print("Input contained an invalid character: \(char)")
     } catch {
-        print("An error occurred: \(error)")
+        // "error" is a pre-defined constant by the compiler
+        print("An unknown error occurred: \(error)")
     }
 }
 evaluate("10 + 3 + 5")
-evaluate("1 + 2 + abcdefg")
+//evaluate("1 + 2 + abcdefg")
