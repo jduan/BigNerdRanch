@@ -8,6 +8,7 @@ import Foundation
 enum Token {
     case number(Int)
     case plus
+    case minus
 }
 
 class Lexer {
@@ -49,6 +50,9 @@ class Lexer {
                 tokens.append(.number(value))
             case "+":
                 tokens.append(.plus)
+                advance()
+            case "-":
+                tokens.append(.minus)
                 advance()
             case " ":
                 // just advance to ignore spaces

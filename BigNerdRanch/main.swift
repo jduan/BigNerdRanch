@@ -301,6 +301,7 @@ func evaluate(_ input: String) {
     }
 }
 evaluate("10 + 3 + 5")
+evaluate("10 + 3 + 5 - 1 - 2")
 evaluate("1 + 2 + abcdefg")
 evaluate("1 + 2 +")
 evaluate("1 + 2 + 5 3")

@@ -35,7 +35,7 @@ class Parser {
         switch token {
         case .number(let value):
             return value
-        case .plus:
+        default:
             throw Parser.Error.invalidToken(token)
         }
     }
@@ -50,6 +50,10 @@ class Parser {
                 // after a plus, we must get another number
                 let nextNumber = try getNumber()
                 value += nextNumber
+            case .minus:
+                // after a minus, we must get another number
+                let nextNumber = try getNumber()
+                value -= nextNumber
             case .number:
                 throw Parser.Error.invalidToken(token)
             }
