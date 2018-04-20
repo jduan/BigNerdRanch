@@ -354,3 +354,23 @@ var intStack2 = Stack<Int>()
 var doubledStack = intStack2.map { 2 * $0 }
 print(doubledStack.pop())
 print(doubledStack.pop())
+
+// Using a type constraint to allow checking for equality
+// T must conform to the Equatable protocol
+func checkIfEqual<T: Equatable>(_ first: T, _ second: T) -> Bool {
+    return first == second
+}
+print(checkIfEqual(1, 1))
+print(checkIfEqual("a string", "a string"))
+print(checkIfEqual("a string", "a different string"))
+
+// Both T and U conform to the CustomStringConvertible protocol, but
+// they don't have to be the same type.
+func checkIfDescriptionsMatch<T: CustomStringConvertible, U: CustomStringConvertible>(
+        _ first: T, _ second: U) -> Bool {
+    return first.description == second.description
+}
+
+print(checkIfDescriptionsMatch(Int(1), UInt(1)))
+print(checkIfDescriptionsMatch(1, 1.0))
+print(checkIfDescriptionsMatch(Float(1.0), Double(1.0)))
