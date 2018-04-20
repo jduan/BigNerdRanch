@@ -322,3 +322,30 @@ c.fillGas()
 print("gas level: \(c.gasLevel)")
 
 print("5.timesFive: \(5.timesFive)")
+
+/////////////////////////////////////////////////////////////////////////////
+print("\n Generics \n")
+/////////////////////////////////////////////////////////////////////////////
+
+var intStack = Stack<Int>()
+intStack.push(1)
+intStack.push(2)
+print(intStack.pop())
+print(intStack.pop())
+print(intStack.pop())
+
+var stringStack = Stack<String>()
+stringStack.push("this is a string")
+stringStack.push("this is another string")
+print(stringStack.pop())
+
+func myMap<T, U>(_ items: [T], _ f: (T) -> (U)) -> [U] {
+    var result = [U]()
+    for item in items {
+        result.append(f(item))
+    }
+    return result
+}
+let strings = ["one", "two", "three"]
+let stringLengths: [Int] = myMap(strings) { $0.count }
+print(stringLengths)
