@@ -48,6 +48,10 @@ extension Car {
         self.init(make: make, model: model, year: year, color: "Black",
                 nickname: "N/A", gasLevel: 1.0)
     }
+    init(make: String, model: String, year: Int, gasLevel: Double) {
+        self.init(make: make, model: model, year: year, color: "Black",
+                nickname: "N/A", gasLevel: gasLevel)
+    }
 }
 
 // Create an extension with a nested type
@@ -70,10 +74,16 @@ extension Car {
     mutating func emptyGas(by amount: Double) {
         precondition(amount <= 1 && amount > 0,
                 "Amount to remove must be between 0 and 1.")
+        precondition(gasLevel - amount > 0,
+                "Can't lower gas level to negative!")
         gasLevel -= amount
     }
 
     mutating func fillGas() {
         gasLevel = 1.0
     }
+}
+
+extension Int {
+    var timesFive: Int { return self * 5 }
 }

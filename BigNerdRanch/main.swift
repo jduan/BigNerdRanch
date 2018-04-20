@@ -312,7 +312,7 @@ evaluate("1 + 2 ++")
 print("\n === \n")
 /////////////////////////////////////////////////////////////////////////////
 
-var c = Car(make: "Ford", model: "Fusion", year: 2013)
+var c = Car(make: "Ford", model: "Fusion", year: 2013, gasLevel: 0.7)
 print("car: \(c)")
 print("car top speed: \(c.topSpeed)")
 print("kind: \(c.kind)")
@@ -320,3 +320,5 @@ c.emptyGas(by: 0.3)
 print("gas level: \(c.gasLevel)")
 c.fillGas()
 print("gas level: \(c.gasLevel)")
+
+print("5.timesFive: \(5.timesFive)")
