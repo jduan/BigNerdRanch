@@ -306,3 +306,17 @@ evaluate("1 + 2 + abcdefg")
 evaluate("1 + 2 +")
 evaluate("1 + 2 + 5 3")
 evaluate("1 + 2 ++")
+
+/////////////////////////////////////////////////////////////////////////////
+// Extensions
+print("\n === \n")
+/////////////////////////////////////////////////////////////////////////////
+
+var c = Car(make: "Ford", model: "Fusion", year: 2013)
+print("car: \(c)")
+print("car top speed: \(c.topSpeed)")
+print("kind: \(c.kind)")
+c.emptyGas(by: 0.3)
+print("gas level: \(c.gasLevel)")
+c.fillGas()
+print("gas level: \(c.gasLevel)")
