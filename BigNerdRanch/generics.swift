@@ -21,4 +21,14 @@ struct Stack<Element> {
             return items.removeLast()
         }
     }
+
+    // map a Stack and return a new Stack
+    // It only declares one placeholder type, U, but it uses both U and Element.
+    func map<U>(_ f: (Element) -> U) -> Stack<U> {
+        var mappedItems = [U]()
+        for item in items {
+            mappedItems.append(f(item))
+        }
+        return Stack<U>(items: mappedItems)
+    }
 }

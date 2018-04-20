@@ -349,3 +349,8 @@ func myMap<T, U>(_ items: [T], _ f: (T) -> (U)) -> [U] {
 let strings = ["one", "two", "three"]
 let stringLengths: [Int] = myMap(strings) { $0.count }
 print(stringLengths)
+
+var intStack2 = Stack<Int>()
+var doubledStack = intStack2.map { 2 * $0 }
+print(doubledStack.pop())
+print(doubledStack.pop())
