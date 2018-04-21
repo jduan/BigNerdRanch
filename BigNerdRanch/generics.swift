@@ -32,6 +32,17 @@ struct Stack<Element> {
         return Stack<U>(items: mappedItems)
     }
 
+    func filter(_ f: (Element) -> Bool) -> Stack<Element> {
+        var mappedItems = [Element]()
+        for item in items {
+            if f(item) {
+                mappedItems.append(item)
+            }
+        }
+
+        return Stack<Element>(items: mappedItems)
+    }
+
     // push all elements of a Sequence onto the stack
     // Type Constraint where Clauses
     mutating func pushAll<S: Sequence>(_ sequence: S)

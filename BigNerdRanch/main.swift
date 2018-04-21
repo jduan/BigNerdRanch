@@ -378,3 +378,20 @@ print(checkIfDescriptionsMatch(Float(1.0), Double(1.0)))
 var stack3 = Stack<Int>()
 stack3.pushAll([1, 2, 3])
 print("stack3 is \(stack3)")
+
+var stack3Filtered = stack3.filter { $0 > 1 }
+print("stack3Filtered is \(stack3Filtered)")
+
+func findAll<T: Equatable>(items: [T], target: T) -> [Int]? {
+    var i = 0
+    var indices = [Int]()
+    while i < items.count {
+        if items[i] == target {
+            indices.append(i)
+        }
+        i += 1
+    }
+
+    return indices
+}
+print(findAll(items: [5, 3, 7, 3, 9], target: 3) == [1, 3])
