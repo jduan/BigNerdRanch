@@ -374,3 +374,7 @@ func checkIfDescriptionsMatch<T: CustomStringConvertible, U: CustomStringConvert
 print(checkIfDescriptionsMatch(Int(1), UInt(1)))
 print(checkIfDescriptionsMatch(1, 1.0))
 print(checkIfDescriptionsMatch(Float(1.0), Double(1.0)))
+
+var stack3 = Stack<Int>()
+stack3.pushAll([1, 2, 3])
+print("stack3 is \(stack3)")

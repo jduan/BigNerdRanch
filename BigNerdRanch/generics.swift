@@ -31,4 +31,13 @@ struct Stack<Element> {
         }
         return Stack<U>(items: mappedItems)
     }
+
+    // push all elements of a Sequence onto the stack
+    // Type Constraint where Clauses
+    mutating func pushAll<S: Sequence>(_ sequence: S)
+            where S.Iterator.Element == Element {
+        for item in sequence {
+            self.push(item)
+        }
+    }
 }
