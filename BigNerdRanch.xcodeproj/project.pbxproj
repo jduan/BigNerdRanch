@@ -16,6 +16,7 @@
 		9DBAC9D3C2D54ACDCF839639 /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC504DD8C055FB86A866E /* Zombie.swift */; };
 		9DBACAB61822ADF93435DC57 /* Vampire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC5D356F7B4B62788AFFC /* Vampire.swift */; };
 		9DBACAF5CCDDCCBFA9397CEF /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC81511E9C780F79CE7FE /* Monster.swift */; };
+		9DBACB7D895288B92C8D2C59 /* protocol_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBACBB701252727DB932DC1 /* protocol_extensions.swift */; };
 		9DBACDD352ED09D84894549A /* sandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC859BA97889910932F0A /* sandbox.swift */; };
 		9DBACF6DA00E0D984DF16746 /* generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC6DEB896DA16802A9367 /* generics.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		9DBAC859BA97889910932F0A /* sandbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sandbox.swift; sourceTree = "<group>"; };
 		9DBAC87875D3AD33F7B6BC95 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		9DBACAF512FBEEFCD31F54D8 /* Mayor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mayor.swift; sourceTree = "<group>"; };
+		9DBACBB701252727DB932DC1 /* protocol_extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = protocol_extensions.swift; sourceTree = "<group>"; };
 		9DBACE2FE5BB50E0B459FD27 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				9DBACE2FE5BB50E0B459FD27 /* Parser.swift */,
 				9DBAC7E2FE1695BA09485068 /* extensions.swift */,
 				9DBAC6DEB896DA16802A9367 /* generics.swift */,
+				9DBACBB701252727DB932DC1 /* protocol_extensions.swift */,
 			);
 			path = BigNerdRanch;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				9DBAC6C69E90D5993A7E6306 /* Parser.swift in Sources */,
 				9DBAC34D40F83DD4E66415A5 /* extensions.swift in Sources */,
 				9DBACF6DA00E0D984DF16746 /* generics.swift in Sources */,
+				9DBACB7D895288B92C8D2C59 /* protocol_extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
