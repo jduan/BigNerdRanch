@@ -15,6 +15,7 @@ struct EllipticalWorkout: Exercise {
     let name = "Elliptical Workout"
     let caloriesBurned: Double
     let minutes: Double
+    let title = "Workout using the Go Fast Elliptical Trainer 3000"
 }
 
 struct TreadmillWorkout: Exercise {
@@ -59,5 +60,12 @@ extension Sequence where Iterator.Element == Exercise {
             total += exercise.caloriesBurned
         }
         return total
+    }
+}
+
+// Extend a protocol
+extension Exercise {
+    var title: String {
+        return "\(name) - \(minutes) minutes"
     }
 }

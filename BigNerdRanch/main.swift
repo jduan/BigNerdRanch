@@ -410,3 +410,12 @@ print(mondayWorkout.totalCaloriesBurned())
 
 print(ellipticalWorkout)
 print(runningWorkout)
+
+for exercise in mondayWorkout {
+    print("title: \(exercise.title)")
+}
+//  Here is what is most important to understand: Be careful when you are considering writing a
+//  protocol extension that adds properties or methods that are not default implementations for
+//  requirements of the protocol. The runtime behavior may not be what you expect if conforming
+//  types also implement those same properties and methods.
+print("ellipticalWorkout's title: \(ellipticalWorkout.title)")
