@@ -34,3 +34,14 @@ extension Exercise {
         return caloriesBurned / minutes
     }
 }
+
+// Protocol Extension where clauses
+extension Sequence where Iterator.Element == Exercise {
+    func totalCaloriesBurned() -> Double {
+        var total: Double = 0
+        for exercise in self {
+            total += exercise.caloriesBurned
+        }
+        return total
+    }
+}

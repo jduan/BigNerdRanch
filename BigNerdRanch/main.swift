@@ -404,3 +404,6 @@ let ellipticalWorkout = EllipticalWorkout(caloriesBurned: 335, minutes: 30)
 let runningWorkout = TreadmillWorkout(caloriesBurned: 350, minutes: 25, laps: 10.5)
 print("calories burned per minute: \(caloriesBurnedPerMinutes(for: runningWorkout))")
 print("calories burned per minute: \(runningWorkout.caloriesBurnedPerMinutes)")
+
+let mondayWorkout: [Exercise] = [ellipticalWorkout, runningWorkout]
+print(mondayWorkout.totalCaloriesBurned())
