@@ -419,3 +419,23 @@ for exercise in mondayWorkout {
 //  requirements of the protocol. The runtime behavior may not be what you expect if conforming
 //  types also implement those same properties and methods.
 print("ellipticalWorkout's title: \(ellipticalWorkout.title)")
+
+/////////////////////////////////////////////////////////////////////////////
+print("\n Memory Management \n")
+/////////////////////////////////////////////////////////////////////////////
+
+var bob: MM.Person? = MM.Person(name: "Bob")
+print("created \(bob)")
+
+var laptop: MM.Asset? = MM.Asset(name: "Shiny Laptop", value: 1500.0)
+var hat: MM.Asset? = MM.Asset(name: "Cowboy Hat", value: 175.0)
+var backpack: MM.Asset? = MM.Asset(name: "Blue Backpack", value: 45.0)
+
+bob?.takeOwnership(of: laptop!)
+bob?.takeOwnership(of: hat!)
+
+bob = nil
+print("the bob variable is now \(bob)")
+laptop = nil
+hat = nil
+backpack = nil
