@@ -407,3 +407,6 @@ print("calories burned per minute: \(runningWorkout.caloriesBurnedPerMinutes)")
 
 let mondayWorkout: [Exercise] = [ellipticalWorkout, runningWorkout]
 print(mondayWorkout.totalCaloriesBurned())
+
+print(ellipticalWorkout)
+print(runningWorkout)

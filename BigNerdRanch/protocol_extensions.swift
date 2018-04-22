@@ -5,7 +5,7 @@
 
 import Foundation
 
-protocol Exercise {
+protocol Exercise: CustomStringConvertible {
     var name: String { get }
     var caloriesBurned: Double { get }
     var minutes: Double { get }
@@ -32,6 +32,22 @@ func caloriesBurnedPerMinutes<E: Exercise>(for exercise: E) -> Double {
 extension Exercise {
     var caloriesBurnedPerMinutes: Double {
         return caloriesBurned / minutes
+    }
+}
+
+// Since Exercise inherits from CustomStringConvertible, if we don't provide
+// an implementation here, structs that extend Exercise (such as EllipticalWorkout)
+// would need to implement it itself. Here, we provide a default implementation.
+extension Exercise {
+    var description: String {
+        return "Exercise(\(name), burned \(caloriesBurned) calories in \(minutes) minutes"
+    }
+}
+
+// Override a protocol's default implementation
+extension TreadmillWorkout {
+    var description: String {
+        return "TreadmillWrokout(\(caloriesBurned) calories and \(laps) laps in \(minutes) minutes)"
     }
 }
 
