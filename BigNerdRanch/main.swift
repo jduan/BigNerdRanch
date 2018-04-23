@@ -437,6 +437,7 @@ bob?.useNetWorthChangedHandler {
     print("Bob's net worth is now \(netWorth)")
 }
 bob?.takeOwnership(of: hat!)
+bob?.relinquishOwnership(of: hat!)
 
 print("While Bob is alive, hat's owner is \(hat!.owner)")
 bob = nil

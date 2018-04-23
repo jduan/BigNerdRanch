@@ -37,6 +37,14 @@ struct MM {
             }
         }
 
+        func relinquishOwnership(of asset: Asset) {
+            accountant.lost(asset) {
+                asset.owner = nil
+                // Find asset, assuming asset names are unique
+                assets = assets.filter {$0.name != asset.name}
+            }
+        }
+
         func netWorthDidChange(to netWorth: Double) {
             print("The net worth of \(self) is now \(netWorth)")
         }
@@ -78,6 +86,10 @@ struct MM {
         }
         func gained(_ asset: Asset, completion: () -> Void) {
             netWorth += asset.value
+            completion()
+        }
+        func lost(_ asset: Asset, completion: () -> Void) {
+            netWorth -= asset.value
             completion()
         }
     }
