@@ -8,6 +8,7 @@ import Foundation
 struct MM {
     class Person: CustomStringConvertible {
         let name: String
+        let accountant = Accountant()
         var assets = [Asset]()
         var description: String {
           return "Person(\(name))"
@@ -15,6 +16,11 @@ struct MM {
 
         init(name: String) {
             self.name = name
+            accountant.netWorthChangedHandler = {
+                [weak self] netWorth in
+                self?.netWorthDidChange(to: netWorth)
+                return
+            }
         }
 
         deinit {
@@ -24,6 +30,11 @@ struct MM {
         func takeOwnership(of asset: Asset) {
             asset.owner = self
             assets.append(asset)
+            accountant.gained(asset)
+        }
+
+        func netWorthDidChange(to netWorth: Double) {
+            print("The net worth of \(self) is now \(netWorth)")
         }
     }
 
@@ -46,6 +57,19 @@ struct MM {
 
         deinit {
             print("\(self) is being deallocated")
+        }
+    }
+
+    class Accountant {
+        typealias NetWorthChanged = (Double) -> Void
+        var netWorthChangedHandler: NetWorthChanged? = nil
+        var netWorth: Double = 0.0 {
+            didSet {
+                netWorthChangedHandler?(netWorth)
+            }
+        }
+        func gained(_ asset: Asset) {
+            netWorth += asset.value
         }
     }
 }
