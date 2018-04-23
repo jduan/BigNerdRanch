@@ -432,6 +432,10 @@ var hat: MM.Asset? = MM.Asset(name: "Cowboy Hat", value: 175.0)
 var backpack: MM.Asset? = MM.Asset(name: "Blue Backpack", value: 45.0)
 
 bob?.takeOwnership(of: laptop!)
+bob?.useNetWorthChangedHandler {
+    netWorth in
+    print("Bob's net worth is now \(netWorth)")
+}
 bob?.takeOwnership(of: hat!)
 
 print("While Bob is alive, hat's owner is \(hat!.owner)")

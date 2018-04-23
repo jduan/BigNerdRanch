@@ -28,13 +28,21 @@ struct MM {
         }
 
         func takeOwnership(of asset: Asset) {
-            asset.owner = self
-            assets.append(asset)
-            accountant.gained(asset)
+            accountant.gained(asset) {
+                // Note that you did not have to say self.assets.append(asset). The compiler knows
+                // that the closure passed to gained(_:completion:) is non-escaping, so it allows
+                // you to refer to properties and methods on self implicitly.
+                asset.owner = self
+                assets.append(asset)
+            }
         }
 
         func netWorthDidChange(to netWorth: Double) {
             print("The net worth of \(self) is now \(netWorth)")
+        }
+
+        func useNetWorthChangedHandler(handler: @escaping (Double) -> Void) {
+            accountant.netWorthChangedHandler = handler
         }
     }
 
@@ -68,8 +76,9 @@ struct MM {
                 netWorthChangedHandler?(netWorth)
             }
         }
-        func gained(_ asset: Asset) {
+        func gained(_ asset: Asset, completion: () -> Void) {
             netWorth += asset.value
+            completion()
         }
     }
 }
