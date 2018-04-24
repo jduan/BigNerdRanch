@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct Point: Equatable, Comparable {
+struct Point: Comparable {
     let x: Int
     let y: Int
 
