@@ -5,12 +5,19 @@
 
 import Foundation
 
-struct Point: Equatable {
+struct Point: Equatable, Comparable {
     let x: Int
     let y: Int
 
     // you automatically get !=
     static func ==(lhs: Point, rhs: Point) -> Bool {
         return (lhs.x == rhs.x) && (lhs.y == rhs.y)
+    }
+
+    // The Swift standard library defines the >, >=, and <= operators in terms
+    // of the < and == operators.
+    // This is why Comparable only requires that you overload the < operator.
+    static func <(lhs: Point, rhs: Point) -> Bool {
+        return (lhs.x < rhs.x) && (lhs.y < rhs.y)
     }
 }
