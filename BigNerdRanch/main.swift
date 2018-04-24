@@ -446,3 +446,12 @@ print("After Bob is deallocated, hat's owner is \(hat!.owner)")
 laptop = nil
 hat = nil
 backpack = nil
+
+/////////////////////////////////////////////////////////////////////////////
+print("\n Equatable and Comparable \n")
+/////////////////////////////////////////////////////////////////////////////
+
+let a = Point(x: 3, y: 4)
+let b = Point(x: 3, y: 4)
+print("a == b: \(a == b)")
+print("a != b: \(a != b)")

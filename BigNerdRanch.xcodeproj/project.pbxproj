@@ -17,6 +17,7 @@
 		9DBACA522C0C6D23D4D80F6F /* memory_management.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBACA53E0B938EFCA7814B4 /* memory_management.swift */; };
 		9DBACAB61822ADF93435DC57 /* Vampire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC5D356F7B4B62788AFFC /* Vampire.swift */; };
 		9DBACAF5CCDDCCBFA9397CEF /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC81511E9C780F79CE7FE /* Monster.swift */; };
+		9DBACB05B3198845BCF2E1AC /* equatable_comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBACD87A8967003C74ADDA7 /* equatable_comparable.swift */; };
 		9DBACB7D895288B92C8D2C59 /* protocol_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBACBB701252727DB932DC1 /* protocol_extensions.swift */; };
 		9DBACDD352ED09D84894549A /* sandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC859BA97889910932F0A /* sandbox.swift */; };
 		9DBACF6DA00E0D984DF16746 /* generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAC6DEB896DA16802A9367 /* generics.swift */; };
@@ -48,6 +49,7 @@
 		9DBACA53E0B938EFCA7814B4 /* memory_management.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memory_management.swift; sourceTree = "<group>"; };
 		9DBACAF512FBEEFCD31F54D8 /* Mayor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mayor.swift; sourceTree = "<group>"; };
 		9DBACBB701252727DB932DC1 /* protocol_extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = protocol_extensions.swift; sourceTree = "<group>"; };
+		9DBACD87A8967003C74ADDA7 /* equatable_comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = equatable_comparable.swift; sourceTree = "<group>"; };
 		9DBACE2FE5BB50E0B459FD27 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 				9DBAC6DEB896DA16802A9367 /* generics.swift */,
 				9DBACBB701252727DB932DC1 /* protocol_extensions.swift */,
 				9DBACA53E0B938EFCA7814B4 /* memory_management.swift */,
+				9DBACD87A8967003C74ADDA7 /* equatable_comparable.swift */,
 			);
 			path = BigNerdRanch;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				9DBACF6DA00E0D984DF16746 /* generics.swift in Sources */,
 				9DBACB7D895288B92C8D2C59 /* protocol_extensions.swift in Sources */,
 				9DBACA522C0C6D23D4D80F6F /* memory_management.swift in Sources */,
+				9DBACB05B3198845BCF2E1AC /* equatable_comparable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
