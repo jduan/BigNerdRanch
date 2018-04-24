@@ -25,3 +25,12 @@ struct Point: Comparable {
         return Point(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
     }
 }
+
+struct Person2: Equatable {
+    let name: String
+    let age: Int
+
+    static func ==(lhs: Person2, rhs: Person2) -> Bool {
+        return (lhs.name == rhs.name) && (lhs.age == rhs.age)
+    }
+}

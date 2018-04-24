@@ -462,3 +462,10 @@ print("c <= d: \(c2 <= d)")
 print("c > d: \(c2 > d)")
 print("c >= d: \(c2 >= d)")
 print("c + d: \(c2 + d)")
+
+let p1 = Person2(name: "Jingjing", age: 37)
+let p2 = Person2(name: "Qingqing", age: 34)
+let people: [Person2] = [p1, p2]
+print("people: \(people)")
+let idx = people.index(where: { $0 == p1 })
+print("idx: \(idx)")
